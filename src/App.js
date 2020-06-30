@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Login from "./Login"
 import {Map} from "./Map";
 import Profile from "./Profile";
+import Registration from "./Registration";
 
 // import "./App.css";
 
@@ -9,7 +10,8 @@ import Profile from "./Profile";
 const PAGES = {
   login: <Login />,
   map: <Map/>,
-  profile: <Profile/>
+  profile: <Profile/>,
+  registration: <Registration/>
 };
 
 class App extends React.Component {
@@ -50,6 +52,15 @@ class App extends React.Component {
                   }}
                 >
                   Profile
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => {
+                    this.navigateTo("registration");
+                  }}
+                >
+                  Registration
                 </button>
               </li>
             </ul>

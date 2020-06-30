@@ -6,7 +6,7 @@ class Auth extends Component {
     return (
       <div className={classes.Auth}>
         <div>
-          <h1>Авторизация</h1>
+          <h1>Регистрация</h1>
           <div>
             <p>Уже зарегистрирован?</p>
             <a className="App-link" href="#">

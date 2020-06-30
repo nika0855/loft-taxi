@@ -1,17 +1,41 @@
-import React from 'react';
-import Auth from './containers/Auth/Auth';
+import React, { Component } from "react";
+import {Map} from "./Map";
 
-const Login = () => {
-  return (
-    <Auth/>
-    // <form>
-    //   <label htmlFor="email">Email:</label>
-    //   <input type="email" name="email" placeholder="Адрес электронной почты*" id="email" size='28'/>
+class Login extends Component {
+  state = { currentPage: "login" };
 
-    //   <label htmlFor="password">Password:</label>
-    //   <input type="password" name="password" id="password" size='28'/>
-    // </form>
-  );
-};
+  navigateTo = (page) => {
+    this.setState({ currentPage: page });
+  };
+  render() {
+    return (
+      <div>
+        <h1>Войти</h1>
+        <div>
+          <p>Новый пользователь?</p>
+          <a className="App-link" href="#">
+            Зарегистрируйтесь
+          </a>
+        </div>
+
+        <form >
+          <label htmlFor="email">Login:</label>
+          <input type="email" name="email" id="email" size="28" />
+
+          <label htmlFor="password">Password:</label>
+          <input type="password" name="password" id="password" size="28" />
+
+          <button
+            onClick={() => {
+              this.navigateTo(<Map/>);
+            }}
+          >
+            Submit
+          </button>
+        </form>
+      </div>
+    );
+  }
+}
 
 export default Login;
