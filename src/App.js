@@ -1,17 +1,16 @@
 import React, { Component } from "react";
-import Login from "./Login"
-import {Map} from "./Map";
+import Login from "./Login";
+import  Map  from "./Map";
 import Profile from "./Profile";
 import Registration from "./Registration";
 
 // import "./App.css";
 
-
 const PAGES = {
-  login: <Login />,
-  map: <Map/>,
-  profile: <Profile/>,
-  registration: <Registration/>
+  login: Login,
+  map: Map,
+  profile: Profile,
+  registration: Registration,
 };
 
 class App extends React.Component {
@@ -22,6 +21,8 @@ class App extends React.Component {
   };
 
   render() {
+    const Page = PAGES[this.state.currentPage];
+
     return (
       <div className="App">
         <header className="App-header">
@@ -67,7 +68,7 @@ class App extends React.Component {
           </nav>
         </header>
         <main>
-          <section>{PAGES[this.state.currentPage]}</section>
+          <Page navigateTo={this.navigateTo} />
         </main>
       </div>
     );

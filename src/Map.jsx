@@ -1,7 +1,7 @@
 import React from 'react';
 
-export const Map = () => {
-  return <>About</>  
+ const Map = () => {
+  return <h4>Map </h4>
 };
 
- 
+ export default Map

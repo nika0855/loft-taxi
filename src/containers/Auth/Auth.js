@@ -20,7 +20,7 @@ class Auth extends Component {
             <input type="text" placeholder="фамилия*" />
             <input type="text" placeholder="пароль*" />
 
-            <button>Войти</button>
+            <button type= "submit">Войти</button>
           </form>
         </div>
       </div>
